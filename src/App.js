@@ -83,7 +83,7 @@ function App() {
             </div>
             <div className="step">
               <span>3</span>
-              <p id="step-text">See a new complete case file in Needles</p>
+              <p id="step-text">See a new complete case file in Nedles</p>
             </div>
             <div className="step">
               <span id="unique-one">🎉</span>
