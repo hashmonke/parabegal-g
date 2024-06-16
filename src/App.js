@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import cornellLogo from './images/cornell.png';
 import brownLogo from './images/brown.png';
+import demoVideo from './images/parabegaldemo.mov'
 
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
         <div className="hero">
           <div className="text-content">
             <h1 id="header">Mundane paralegal tasks, <span className="highlight">fully automated</span></h1>
-            <p id="sub-header">Upload a client intake form & we’ll paste the info into Clio & send emails automatically.</p>
+            <p id="sub-header">Upload a client intake form & we’ll paste the info into Needles.</p>
             <form onSubmit={handleSubmit}>
               <input
                 id="email"
@@ -56,14 +57,14 @@ function App() {
                     <div className="spinner"></div>
                   </>
                 ) : (
-                  'Sign up'
+                  'Join the waitlist'
                 )}
               </button>
             </form>
           </div>
           <div className="video-container">
             <video width="100%" height="auto" controls>
-              <source  type="video/mp4" />
+              <source src={demoVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -83,11 +84,11 @@ function App() {
             </div>
             <div className="step">
               <span>3</span>
-              <p id="step-text">See a new complete case file in Needles</p>
+              <p id="step-text">We auto-fill a new case record in Needles</p>
             </div>
             <div className="step">
               <span id="unique-one">🎉</span>
-              <p id="step-text">Automatically email the client induction letter</p>
+              <p id="step-text">We auto-email the client your welcome message</p>
             </div>
           </div>
         </div>

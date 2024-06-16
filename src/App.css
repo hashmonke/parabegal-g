@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
+  color: #2D2D2D;
 }
 
 @media (max-width: 768px) {
@@ -61,7 +62,7 @@ form {
 }
 
 #email {
-  padding: 16px 20px;
+  padding: 14px 20px;
   margin-right: 12px;
   border: 1px solid #DFE1E2;
   background-color: #f9f9f9;
@@ -71,7 +72,7 @@ form {
 }
 
 #email:focus {
-  padding: 16px 20px;
+  padding: 14px 20px;
   margin-right: 12px;
   border: 1px solid #9ea0a1;
   background-color: #f9f9f9;
@@ -82,10 +83,10 @@ form {
 }
 
 button {
-  padding: 16px 20px;
-  background-color: #2D2D2D;
+  padding: 14px 20px;
+  background-color: #30A8FF;
   color: white;
-  border: none;
+  border: 1px solid #1e96ed;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
@@ -96,7 +97,7 @@ button {
 }
 
 button:hover {
-  background-color: #242424;
+  background-color: #29a0f5;
 }
 
 .video-container {
@@ -159,6 +160,8 @@ main {
 
 #step-text {
   font-weight: 600;
+  margin-bottom: 0px;
+  line-height: 22px;
 }
 
 .founders {
@@ -181,6 +184,14 @@ main {
 #brown {
   width: auto;
   height: 80px;
+}
+
+#cornell, #brown {
+  filter: grayscale(100%);
+}
+
+#cornell:hover, #brown:hover {
+  filter: grayscale(0%);
 }
 
 footer {
