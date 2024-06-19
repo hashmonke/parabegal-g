@@ -4,18 +4,27 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import cornellLogo from './images/cornell.png';
 import brownLogo from './images/brown.png';
-import demoVideo from './images/parabegaldemo.mov'
-
+import demoVideo from './images/parabegaldemo.mov';
 
 function App() {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [lastSubmissionTime, setLastSubmissionTime] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const currentTime = Date.now();
+    if (currentTime - lastSubmissionTime < 30000) {
+      toast.error('Please wait 30 seconds before submitting again.');
+      return;
+    }
+
     setIsLoading(true);
+    setLastSubmissionTime(currentTime);
+
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwoN9tImL7TRjcnhjsClP-1Itw-49KNSHBE7Rkz6HGLlol2MO8-qFVVFKMdpv0zp-9p/exec';
-    
+
     fetch(scriptURL, {
       method: 'POST',
       body: new URLSearchParams({ email }),
@@ -35,7 +44,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="logo-header">
-          <h1 className="logo-text"> 🐾 Para🅱️egal</h1>
+          <h1 className="logo-text"> 🐕 Para🅱️egal</h1>
         </div>
         <div className="hero">
           <div className="text-content">
