@@ -44,7 +44,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="logo-header">
-          <h1 className="logo-text"> 🐕 Para🅱️egal</h1>
+          <h1 className="logo-text"> 🐕 Parabegal</h1>
         </div>
         <div className="hero">
           <div className="text-content">
